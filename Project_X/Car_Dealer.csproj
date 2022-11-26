@@ -187,7 +187,6 @@
     <Compile Include="Admin.Designer.cs">
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Car.cs" />
     <Compile Include="Login Panel.cs">
       <SubType>Form</SubType>
     </Compile>

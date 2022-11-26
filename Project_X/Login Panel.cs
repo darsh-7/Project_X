@@ -7,7 +7,7 @@ namespace Project_X
 {
     public partial class Form1 : Form
     {
-        SqlConnection con = new SqlConnection("data Source=.;Initial Catalog=Car_System;Trusted_Connection=True;TrustServerCertificate=True;");
+        SqlConnection con = new SqlConnection(Program.sqlConnection);
         SqlCommand cmd;
 
         public Form1()

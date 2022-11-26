@@ -55,7 +55,7 @@
             // 
             // logout
             // 
-            this.logout.Location = new System.Drawing.Point(79, 7);
+            this.logout.Location = new System.Drawing.Point(267, 2);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(75, 23);
             this.logout.TabIndex = 2;
@@ -65,19 +65,19 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(175, 7);
+            this.button1.Location = new System.Drawing.Point(398, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Logout";
+            this.button1.Text = "Admin";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // flowLayoutPanel2
+            // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(543, 7);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel2";
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(776, 345);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
