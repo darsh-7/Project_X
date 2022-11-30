@@ -1,6 +1,9 @@
-﻿namespace Project_X
+﻿using Project_X.Properties;
+using System.Windows.Forms;
+
+namespace Project_X
 {
-    partial class Form1
+    partial class Login_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,81 +31,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.username = new System.Windows.Forms.TextBox();
-            this.add = new System.Windows.Forms.Button();
-            this.password = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.username = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.use = new System.Windows.Forms.Button();
+            this.login = new System.Windows.Forms.Button();
+            this.password = new System.Windows.Forms.TextBox();
+            this.stats = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // username
+            // pictureBox
             // 
-            this.username.Location = new System.Drawing.Point(419, 182);
-            this.username.Name = "username";
-            this.username.Size = new System.Drawing.Size(207, 20);
-            this.username.TabIndex = 0;
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox.InitialImage")));
+            this.pictureBox.Location = new System.Drawing.Point(-15, -58);
+            this.pictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(275, 441);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
             // 
-            // add
+            // label5
             // 
-            this.add.Location = new System.Drawing.Point(419, 282);
-            this.add.Name = "add";
-            this.add.Size = new System.Drawing.Size(75, 23);
-            this.add.TabIndex = 1;
-            this.add.Text = "add";
-            this.add.UseVisualStyleBackColor = true;
-            this.add.Click += new System.EventHandler(this.addUser);
-            // 
-            // password
-            // 
-            this.password.Location = new System.Drawing.Point(419, 231);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(207, 20);
-            this.password.TabIndex = 2;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.label5.Location = new System.Drawing.Point(357, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(114, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Motor Empire";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(419, 163);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(322, 136);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Name";
+            this.label1.Size = new System.Drawing.Size(82, 17);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "User Name";
+            // 
+            // username
+            // 
+            this.username.Location = new System.Drawing.Point(322, 150);
+            this.username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.username.MaxLength = 15;
+            this.username.Name = "username";
+            this.username.Size = new System.Drawing.Size(162, 20);
+            this.username.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(419, 212);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(322, 175);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 13);
+            this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Pass";
+            this.label2.Text = "Password";
             // 
             // use
             // 
-            this.use.Location = new System.Drawing.Point(551, 282);
+            this.use.BackColor = System.Drawing.Color.Black;
+            this.use.ForeColor = System.Drawing.Color.White;
+            this.use.Location = new System.Drawing.Point(322, 250);
+            this.use.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.use.Name = "use";
-            this.use.Size = new System.Drawing.Size(75, 23);
-            this.use.TabIndex = 5;
-            this.use.TabStop = false;
-            this.use.Text = "use";
-            this.use.UseVisualStyleBackColor = true;
-            this.use.Click += new System.EventHandler(this.login);
+            this.use.Size = new System.Drawing.Size(81, 23);
+            this.use.TabIndex = 7;
+            this.use.Text = "Sign in";
+            this.use.UseVisualStyleBackColor = false;
+            this.use.Click += new System.EventHandler(this.login_Click);
             // 
-            // Form1
+            // login
+            // 
+            this.login.BackColor = System.Drawing.Color.Firebrick;
+            this.login.Font = new System.Drawing.Font("Segoe UI", 7F);
+            this.login.ForeColor = System.Drawing.Color.White;
+            this.login.Location = new System.Drawing.Point(472, 328);
+            this.login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.login.Name = "login";
+            this.login.Size = new System.Drawing.Size(54, 18);
+            this.login.TabIndex = 10;
+            this.login.Text = "Exit";
+            this.login.UseVisualStyleBackColor = false;
+            this.login.Click += new System.EventHandler(this.login_Click_1);
+            // 
+            // password
+            // 
+            this.password.Location = new System.Drawing.Point(322, 189);
+            this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.password.MaxLength = 15;
+            this.password.Name = "password";
+            this.password.Size = new System.Drawing.Size(162, 20);
+            this.password.TabIndex = 11;
+            this.password.UseSystemPasswordChar = true;
+            // 
+            // stats
+            // 
+            this.stats.AutoSize = true;
+            this.stats.Font = new System.Drawing.Font("Yu Gothic Medium", 9F);
+            this.stats.ForeColor = System.Drawing.Color.IndianRed;
+            this.stats.Location = new System.Drawing.Point(323, 211);
+            this.stats.Name = "stats";
+            this.stats.Size = new System.Drawing.Size(33, 16);
+            this.stats.TabIndex = 12;
+            this.stats.Text = "Erorr";
+            this.stats.Visible = false;
+            // 
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1082, 593);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(536, 354);
+            this.Controls.Add(this.stats);
+            this.Controls.Add(this.password);
+            this.Controls.Add(this.login);
             this.Controls.Add(this.use);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.password);
-            this.Controls.Add(this.add);
             this.Controls.Add(this.username);
-            this.Name = "Form1";
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.pictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Login_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,12 +173,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox username;
-        private System.Windows.Forms.Button add;
-        private System.Windows.Forms.TextBox password;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button use;
+        private PictureBox pictureBox;
+        private Label label5;
+        private Label label1;
+        private TextBox username;
+        private Label label2;
+        private Button use;
+        private Button login;
+        private TextBox password;
+        private Label stats;
     }
 }
 
