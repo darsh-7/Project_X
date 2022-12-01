@@ -43,11 +43,15 @@ namespace Project_X
             LoadProductsql($"SELECT * FROM {tableName};");
 
         }
+        /// <summary>
+        /// get all cars data from the DB
+        /// </summary>
+        /// <param name="cmdString"></param>
         public void GetListData(string cmdString)
         {
-            SqlCommand cmmd = new SqlCommand(cmdString, con);
-
-            con.Open();
+            SqlConnection conn = new SqlConnection(Program.sqlConnection);
+            SqlCommand cmmd = new SqlCommand(cmdString, conn);
+            conn.Open();
             SqlDataReader rdr = cmmd.ExecuteReader();
             if (rdr.HasRows)
             {
@@ -84,7 +88,7 @@ namespace Project_X
                 NoData.Visible = true;
                 //NoData.VisibleChanged(true);
             }
-            con.Close();
+            conn.Close();
         }
         private Image Getmages(string year , string carModel)
         {
@@ -186,7 +190,7 @@ namespace Project_X
 
         private void searchbutton_Click(object sender, EventArgs e)
         {
-            LoadProductsql($"select * from {tableName} WHERE cars.model LIKE '%{searchBox.Text}%';");
+            LoadProductsql($"select * from {tableName} WHERE model LIKE '%{searchBox.Text}%';");
         }
 
         public void reset_Click(object sender, EventArgs e)
@@ -296,7 +300,12 @@ namespace Project_X
 
         private void sublayer_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("coming soon :)");
+            supplies frm2 = new supplies();
+            frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
+            frm2.Show();
+
+            this.WindowState = FormWindowState.Minimized;
+            this.ShowInTaskbar = false;
         }
 
         private void manageButton_Click(object sender, EventArgs e)

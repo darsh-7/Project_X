@@ -70,7 +70,7 @@ namespace Project_X
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(322, 136);
+            this.label1.Location = new System.Drawing.Point(322, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace Project_X
             // 
             // username
             // 
-            this.username.Location = new System.Drawing.Point(322, 150);
+            this.username.Location = new System.Drawing.Point(325, 153);
             this.username.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.username.MaxLength = 15;
             this.username.Name = "username";
@@ -110,6 +110,7 @@ namespace Project_X
             // 
             // login
             // 
+            this.login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.login.BackColor = System.Drawing.Color.Firebrick;
             this.login.Font = new System.Drawing.Font("Segoe UI", 7F);
             this.login.ForeColor = System.Drawing.Color.White;
@@ -124,7 +125,7 @@ namespace Project_X
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(322, 189);
+            this.password.Location = new System.Drawing.Point(325, 194);
             this.password.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.password.MaxLength = 15;
             this.password.Name = "password";
@@ -137,7 +138,7 @@ namespace Project_X
             this.stats.AutoSize = true;
             this.stats.Font = new System.Drawing.Font("Yu Gothic Medium", 9F);
             this.stats.ForeColor = System.Drawing.Color.IndianRed;
-            this.stats.Location = new System.Drawing.Point(323, 211);
+            this.stats.Location = new System.Drawing.Point(322, 216);
             this.stats.Name = "stats";
             this.stats.Size = new System.Drawing.Size(33, 16);
             this.stats.TabIndex = 12;

@@ -103,8 +103,6 @@ namespace Project_X
             SqlDataReader rdr = cmmd.ExecuteReader();
             if (rdr.HasRows)
             {
-                Car car;
-
                 while (rdr.Read())
                 {
 

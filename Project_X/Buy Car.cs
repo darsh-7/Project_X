@@ -108,7 +108,7 @@ namespace Project_X
 
             try
             {
-                SqlCommand cmd = new SqlCommand($"select * from customers where nationalID = '{IDBox.Text}';", con);
+                SqlCommand cmd = new SqlCommand($"select * from customers where ssn = '{IDBox.Text}';", con);
 
                 con.Open();
 
@@ -229,13 +229,6 @@ namespace Project_X
                     con.Close();
                     return;
                 }
-
-                cmd = new SqlCommand($"INSERT INTO bills VALUES ('{today}','{Program.name}','{IDBox.Text}','{carID}')", con);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show("bill saved");
-                Close();
 
                 try
                 {

@@ -24,7 +24,7 @@ namespace Project_X
                 Font fnt = new Font(carcost.Font, FontStyle.Strikeout);
                 carcost.Font = fnt;
             }
-            if (Program.accountAccs <= 2)
+            if (Program.accountAccs > 2)
                 Buy.BackColor = Color.DimGray;
 
             DateTime today = DateTime.Today;
@@ -91,7 +91,7 @@ namespace Project_X
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Program.accountAccs != 2)
+            if (Program.accountAccs > 2)
             {
                 return;
             }

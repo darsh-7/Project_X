@@ -2,7 +2,7 @@
 
 namespace Project_X
 {
-    partial class Admin
+    partial class supplies
     {
         /// <summary>
         /// Required designer variable.
@@ -30,21 +30,12 @@ namespace Project_X
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(supplies));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.labelquary = new System.Windows.Forms.Label();
-            this.queryBox = new System.Windows.Forms.TextBox();
-            this.query = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
             this.insert = new System.Windows.Forms.Button();
             this.delete = new System.Windows.Forms.Button();
             this.label567 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -61,15 +52,12 @@ namespace Project_X
             this.search = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.employees = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.labeltable = new System.Windows.Forms.Label();
-            this.customers = new System.Windows.Forms.Button();
+            this.carsmodels = new System.Windows.Forms.Button();
             this.carimages = new System.Windows.Forms.Button();
             this.TableName = new System.Windows.Forms.Label();
             this.cars = new System.Windows.Forms.Button();
-            this.names = new System.Windows.Forms.Button();
-            this.bills = new System.Windows.Forms.Button();
             this.back = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -84,19 +72,10 @@ namespace Project_X
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.Linen;
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.labelquary);
-            this.panel1.Controls.Add(this.queryBox);
-            this.panel1.Controls.Add(this.query);
             this.panel1.Controls.Add(this.update);
             this.panel1.Controls.Add(this.insert);
             this.panel1.Controls.Add(this.delete);
             this.panel1.Controls.Add(this.label567);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox5);
@@ -118,82 +97,12 @@ namespace Project_X
             this.panel1.Size = new System.Drawing.Size(357, 563);
             this.panel1.TabIndex = 0;
             // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(183, 209);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(162, 20);
-            this.textBox9.TabIndex = 49;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label9.Location = new System.Drawing.Point(179, 186);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 21);
-            this.label9.TabIndex = 48;
-            this.label9.Text = "Color";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(183, 164);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(162, 20);
-            this.textBox8.TabIndex = 47;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label8.Location = new System.Drawing.Point(179, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 21);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Color";
-            // 
-            // labelquary
-            // 
-            this.labelquary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.labelquary.AutoSize = true;
-            this.labelquary.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.labelquary.Location = new System.Drawing.Point(8, 511);
-            this.labelquary.Name = "labelquary";
-            this.labelquary.Size = new System.Drawing.Size(43, 17);
-            this.labelquary.TabIndex = 44;
-            this.labelquary.Text = "Query";
-            // 
-            // queryBox
-            // 
-            this.queryBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.queryBox.Location = new System.Drawing.Point(11, 531);
-            this.queryBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.queryBox.Name = "queryBox";
-            this.queryBox.Size = new System.Drawing.Size(249, 20);
-            this.queryBox.TabIndex = 45;
-            // 
-            // query
-            // 
-            this.query.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.query.BackColor = System.Drawing.Color.Black;
-            this.query.ForeColor = System.Drawing.Color.White;
-            this.query.Location = new System.Drawing.Point(266, 528);
-            this.query.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.query.Name = "query";
-            this.query.Size = new System.Drawing.Size(81, 23);
-            this.query.TabIndex = 43;
-            this.query.Text = "Query";
-            this.query.UseVisualStyleBackColor = false;
-            this.query.Click += new System.EventHandler(this.query_Click);
-            // 
             // update
             // 
             this.update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.update.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.update.ForeColor = System.Drawing.Color.White;
-            this.update.Location = new System.Drawing.Point(266, 472);
+            this.update.Location = new System.Drawing.Point(264, 508);
             this.update.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(81, 24);
@@ -207,7 +116,7 @@ namespace Project_X
             this.insert.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.insert.BackColor = System.Drawing.Color.Green;
             this.insert.ForeColor = System.Drawing.Color.White;
-            this.insert.Location = new System.Drawing.Point(266, 444);
+            this.insert.Location = new System.Drawing.Point(264, 480);
             this.insert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(81, 24);
@@ -221,7 +130,7 @@ namespace Project_X
             this.delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.delete.BackColor = System.Drawing.Color.Firebrick;
             this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(266, 500);
+            this.delete.Location = new System.Drawing.Point(264, 536);
             this.delete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(81, 24);
@@ -239,24 +148,6 @@ namespace Project_X
             this.label567.Size = new System.Drawing.Size(146, 30);
             this.label567.TabIndex = 38;
             this.label567.Text = "Data Actions";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(183, 119);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(162, 20);
-            this.textBox7.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label7.Location = new System.Drawing.Point(179, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 21);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Color";
             // 
             // textBox6
             // 
@@ -404,33 +295,17 @@ namespace Project_X
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.AutoSize = true;
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.panel2.Controls.Add(this.employees);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.labeltable);
-            this.panel2.Controls.Add(this.customers);
+            this.panel2.Controls.Add(this.carsmodels);
             this.panel2.Controls.Add(this.carimages);
             this.panel2.Controls.Add(this.TableName);
             this.panel2.Controls.Add(this.cars);
-            this.panel2.Controls.Add(this.names);
-            this.panel2.Controls.Add(this.bills);
             this.panel2.Location = new System.Drawing.Point(369, 8);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(547, 539);
             this.panel2.TabIndex = 1;
-            // 
-            // employees
-            // 
-            this.employees.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.employees.ForeColor = System.Drawing.Color.Black;
-            this.employees.Location = new System.Drawing.Point(447, 45);
-            this.employees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.employees.Name = "employees";
-            this.employees.Size = new System.Drawing.Size(81, 23);
-            this.employees.TabIndex = 54;
-            this.employees.Text = "Employees";
-            this.employees.UseVisualStyleBackColor = false;
-            this.employees.Click += new System.EventHandler(this.employees_Click);
             // 
             // dataGridView1
             // 
@@ -456,31 +331,31 @@ namespace Project_X
             this.labeltable.TabIndex = 52;
             this.labeltable.Text = "Table :";
             // 
-            // customers
+            // carsmodels
             // 
-            this.customers.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.customers.ForeColor = System.Drawing.Color.Black;
-            this.customers.Location = new System.Drawing.Point(357, 45);
-            this.customers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.customers.Name = "customers";
-            this.customers.Size = new System.Drawing.Size(81, 23);
-            this.customers.TabIndex = 50;
-            this.customers.Text = "Customers";
-            this.customers.UseVisualStyleBackColor = false;
-            this.customers.Click += new System.EventHandler(this.customers_Click);
+            this.carsmodels.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.carsmodels.ForeColor = System.Drawing.Color.Black;
+            this.carsmodels.Location = new System.Drawing.Point(96, 45);
+            this.carsmodels.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carsmodels.Name = "carsmodels";
+            this.carsmodels.Size = new System.Drawing.Size(81, 23);
+            this.carsmodels.TabIndex = 50;
+            this.carsmodels.Text = "Models";
+            this.carsmodels.UseVisualStyleBackColor = false;
+            this.carsmodels.Click += new System.EventHandler(this.carsImage_Click);
             // 
             // carimages
             // 
             this.carimages.BackColor = System.Drawing.Color.AntiqueWhite;
             this.carimages.ForeColor = System.Drawing.Color.Black;
-            this.carimages.Location = new System.Drawing.Point(270, 45);
+            this.carimages.Location = new System.Drawing.Point(183, 45);
             this.carimages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.carimages.Name = "carimages";
             this.carimages.Size = new System.Drawing.Size(81, 23);
             this.carimages.TabIndex = 49;
             this.carimages.Text = "Images";
             this.carimages.UseVisualStyleBackColor = false;
-            this.carimages.Click += new System.EventHandler(this.models_Click);
+            this.carimages.Click += new System.EventHandler(this.carsImage_Click);
             // 
             // TableName
             // 
@@ -496,7 +371,7 @@ namespace Project_X
             // 
             this.cars.BackColor = System.Drawing.Color.AntiqueWhite;
             this.cars.ForeColor = System.Drawing.Color.Black;
-            this.cars.Location = new System.Drawing.Point(96, 45);
+            this.cars.Location = new System.Drawing.Point(9, 45);
             this.cars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cars.Name = "cars";
             this.cars.Size = new System.Drawing.Size(81, 23);
@@ -504,32 +379,6 @@ namespace Project_X
             this.cars.Text = "Cars";
             this.cars.UseVisualStyleBackColor = false;
             this.cars.Click += new System.EventHandler(this.cars_Click);
-            // 
-            // names
-            // 
-            this.names.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.names.ForeColor = System.Drawing.Color.Black;
-            this.names.Location = new System.Drawing.Point(9, 45);
-            this.names.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.names.Name = "names";
-            this.names.Size = new System.Drawing.Size(81, 23);
-            this.names.TabIndex = 47;
-            this.names.Text = "Names";
-            this.names.UseVisualStyleBackColor = false;
-            this.names.Click += new System.EventHandler(this.names_Click);
-            // 
-            // bills
-            // 
-            this.bills.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.bills.ForeColor = System.Drawing.Color.Black;
-            this.bills.Location = new System.Drawing.Point(183, 45);
-            this.bills.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bills.Name = "bills";
-            this.bills.Size = new System.Drawing.Size(81, 23);
-            this.bills.TabIndex = 46;
-            this.bills.Text = "Bills";
-            this.bills.UseVisualStyleBackColor = false;
-            this.bills.Click += new System.EventHandler(this.bills_Click);
             // 
             // back
             // 
@@ -559,7 +408,7 @@ namespace Project_X
             this.close.UseVisualStyleBackColor = false;
             this.close.Click += new System.EventHandler(this.close_Click);
             // 
-            // Admin
+            // supplies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -571,7 +420,7 @@ namespace Project_X
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Admin";
+            this.Name = "supplies";
             this.Text = "Motor Empire";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
@@ -594,8 +443,6 @@ namespace Project_X
         private Button insert;
         private Button delete;
         private Label label567;
-        private TextBox textBox7;
-        private Label label7;
         private TextBox textBox6;
         private Label label6;
         private TextBox textBox5;
@@ -608,24 +455,14 @@ namespace Project_X
         private Label label2;
         private TextBox textBox1;
         private Label label1;
-        private Label labelquary;
-        private TextBox queryBox;
-        private Button query;
         private Button update;
-        private Button customers;
+        private Button carsmodels;
         private Button carimages;
         private Label TableName;
         private Button cars;
-        private Button names;
-        private Button bills;
         private Button back;
         private Label labeltable;
         private DataGridView dataGridView1;
         private Button close;
-        private Button employees;
-        private TextBox textBox9;
-        private Label label9;
-        private TextBox textBox8;
-        private Label label8;
     }
 }

@@ -79,8 +79,6 @@ namespace Project_X
         {
             if (username.Text != "" && password.Text != "")
             {
-
-
                 if (checkuser())
                 {
                     Program.name = username.Text;
@@ -92,8 +90,6 @@ namespace Project_X
                         SqlDataReader rdr = cmmd.ExecuteReader();
                         if (rdr.HasRows)
                         {
-                            Car car;
-
                             while (rdr.Read())
                             {
                                 Program.accountAccs = (int)rdr["roleId"];

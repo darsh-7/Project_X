@@ -35,7 +35,7 @@ namespace Project_X
                 if (table == tables[0])
                     cmd = new SqlCommand($"select * from {tableSelected} where name = '{textBox1.Text}';", con);
                 else if (table == tables[1])
-                    cmd = new SqlCommand($"select * from {tableSelected} where id = '{textBox1.Text}';", con);
+                    cmd = new SqlCommand($"select * from cars where id = '{textBox1.Text}';", con);
                 else if (table == tables[2])
                     cmd = new SqlCommand($"select * from {tableSelected} where id = '{textBox1.Text}';", con);
                 else if (table == tables[3])
@@ -64,6 +64,18 @@ namespace Project_X
             return false;
 
 
+        }
+        private bool carModelExist()
+        {
+
+            cmd = new SqlCommand($"select * from CarsModels where model = '{textBox2.Text}';", con);
+            con.Open();
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(ds);
+            con.Close();
+
+            return (ds.Tables.Count > 0) && (ds.Tables[0].Rows.Count > 0);
         }
         private void HideViewLables(byte stats, byte num = 0)
         {
@@ -346,12 +358,11 @@ namespace Project_X
 
         private void insert_Click(object sender, EventArgs e)
         {
-            bool boxEmpty3 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "";
             bool boxEmpty4 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "";
             bool boxEmpty5 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
-                                 && textBox5.Text != "" ;
+                                 && textBox5.Text != "";
             bool boxEmpty6 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
-                                 && textBox5.Text != "" && textBox6.Text != "" ;
+                                 && textBox5.Text != "" && textBox6.Text != "";
             bool boxEmpty7 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
                                  && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "";
             bool boxEmpty9 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
@@ -391,10 +402,33 @@ namespace Project_X
                                                 label8.Text = "year";
                                                 label9.Text = "catalogID";
                         */
-                        cmd = new SqlCommand($"INSERT INTO CarsModels VALUES ('{textBox2.Text}','{textBox7.Text}','{textBox8.Text}','{textBox9.Text}')", con);
+
+                        cmd = new SqlCommand($"select * from CarsModels where model = '{textBox2.Text}';", con);
                         con.Open();
-                        cmd.ExecuteNonQuery();
+                        DataSet ds = new DataSet();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        da.Fill(ds);
+                        con.Close();
+
+                        if (!carModelExist())
+                        {
+                            try
+                            {
+                                cmd = new SqlCommand($"INSERT INTO CarsModels VALUES ('{textBox2.Text}','{textBox7.Text}','{textBox8.Text}','{textBox9.Text}')", con);
+                                con.Open();
+                                cmd.ExecuteNonQuery();
+                                con.Close();
+                            }
+                            catch (Exception)
+                            {
+                                MessageBox.Show("error : model name not right");
+                                con.Close();
+                                return;
+                            }
+                        }
+
                         cmd = new SqlCommand($"INSERT INTO Cars VALUES ('{textBox2.Text}','{textBox3.Text}','{textBox4.Text}','{textBox5.Text}','{textBox6.Text}')", con);
+                        con.Open();
                         cmd.ExecuteNonQuery();
                         con.Close();
                         MessageBox.Show("car added");
@@ -491,7 +525,6 @@ namespace Project_X
 
         private void Update_Click(object sender, EventArgs e)
         {
-            bool boxEmpty3 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "";
             bool boxEmpty4 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "";
             bool boxEmpty5 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
                                  && textBox5.Text != "";
@@ -499,6 +532,9 @@ namespace Project_X
                                  && textBox5.Text != "" && textBox6.Text != "";
             bool boxEmpty7 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
                                  && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "";
+            bool boxEmpty9 = textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != ""
+                     && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "";
+
 
             if (boxEmpty4)
             {
@@ -512,9 +548,37 @@ namespace Project_X
                     {
                         if (tableSelected == tables[0])
                             cmd = new SqlCommand($"UPDATE {tableSelected} SET name = '{textBox1.Text}', password = '{textBox2.Text}' , role= '{textBox3.Text}' employeeSsn = '{textBox4.Text}' WHERE name = '{textBox1.Text}';", con);
+
+
                         else if (tableSelected == tables[1])
-                            cmd = new SqlCommand($"UPDATE {tableSelected} SET ID = '{textBox1.Text}', carModel = '{textBox2.Text}', quantity = '{textBox3.Text}'" +
-                                $", cost = '{textBox4.Text}', carSpeed = '{textBox5.Text}', carYear = '{textBox6.Text}', colors = '{textBox7.Text}' WHERE carID = '{textBox1.Text}';", con);
+                        {
+                            if (tableSelected == tables[1] && carModelExist())
+                            {
+                                try
+                                {
+                                    cmd = new SqlCommand($"INSERT INTO CarsModels VALUES ('{textBox2.Text}','{textBox7.Text}','{textBox8.Text}','{textBox9.Text}')", con);
+                                    con.Open();
+                                    cmd.ExecuteNonQuery();
+                                    con.Close();
+                                }
+                                catch (Exception)
+                                {
+                                    MessageBox.Show("error : couldn't add the new model");
+                                    con.Close();
+                                    return;
+                                }
+
+                                /*                                cmd = new SqlCommand($"UPDATE carsmodels SET model = '{textBox2.Text}', color = '{textBox7.Text}'" +
+                                                                    $", cost = '{textBox8.Text}', offer = '{textBox9.Text}' WHERE id = '{textBox1.Text}';", con);
+                                                                cmd.ExecuteNonQuery();
+                                */
+                            }
+                            else
+                            {
+                                cmd = new SqlCommand($"UPDATE {tableSelected} SET model = '{textBox1.Text}', speed = '{textBox7.Text}'" +
+                                                                        $", year = '{textBox8.Text}', catagoryId = '{textBox9.Text}' WHERE model = '{textBox1.Text}';", con);
+                            }
+                        }
                         else if (tableSelected == tables[2])
                             cmd = new SqlCommand($"UPDATE {tableSelected} SET Date = '{textBox2.Text}', userAccount = '{textBox3.Text}'" +
                                 $", customer_Ssn = '{textBox4.Text}', carId = '{textBox5.Text}' WHERE id = '{textBox1.Text}';", con);
@@ -522,13 +586,13 @@ namespace Project_X
                                                     cmd = new SqlCommand($"UPDATE {tableSelected} SET ID = '{textBox1.Text}', carModel = '{textBox2.Text}', quantity = '{textBox3.Text}'" +
                                                         $", cost = '{textBox4.Text}', carSpeed = '{textBox5.Text}', carYear = '{textBox6.Text}', colors = '{textBox7.Text}' WHERE carID = '{textBox1.Text}';", con);
                         */
-                        else if (tableSelected == tables[4]&& textBox1.Text != "")
+                        else if (tableSelected == tables[4] && textBox1.Text != "")
                             cmd = new SqlCommand($"UPDATE {tableSelected} SET ssn = '{textBox1.Text}', name = '{textBox2.Text}'" +
                                 $", phone = '{textBox4.Text}', address = '{textBox5.Text}', email = '{textBox6.Text}', gender = '{textBox7.Text}' WHERE ssn = '{textBox1.Text}';", con);
                         else if (tableSelected == tables[4])
                             cmd = new SqlCommand($"UPDATE {tableSelected} SET ssn = '{textBox1.Text}', name = '{textBox2.Text}', Account = '{textBox3.Text}'" +
                                 $", phone = '{textBox4.Text}', address = '{textBox5.Text}', email = '{textBox6.Text}', gender = '{textBox7.Text}' WHERE ssn = '{textBox1.Text}';", con);
-                         else if (tableSelected == tables[5])
+                        else if (tableSelected == tables[5])
                             cmd = new SqlCommand($"UPDATE {tableSelected} SET ssn = '{textBox1.Text}', name = '{textBox2.Text}', salary = '{textBox3.Text}'" +
                                 $", address = '{textBox4.Text}', phone = '{textBox5.Text}', job = '{textBox6.Text}' WHERE ssn = '{textBox1.Text}';", con);
 

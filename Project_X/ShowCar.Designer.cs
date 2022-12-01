@@ -241,7 +241,7 @@
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(347, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(494, 435);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(514, 435);
             this.flowLayoutPanel1.TabIndex = 25;
             // 
             // nodata
@@ -259,7 +259,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 459);
+            this.ClientSize = new System.Drawing.Size(873, 459);
             this.Controls.Add(this.nodata);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label8);

@@ -78,7 +78,7 @@ namespace Project_X
             this.logout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.logout.BackColor = System.Drawing.Color.Black;
             this.logout.ForeColor = System.Drawing.Color.White;
-            this.logout.Location = new System.Drawing.Point(9, 738);
+            this.logout.Location = new System.Drawing.Point(9, 830);
             this.logout.Margin = new System.Windows.Forms.Padding(2);
             this.logout.Name = "logout";
             this.logout.Size = new System.Drawing.Size(81, 23);
@@ -104,7 +104,6 @@ namespace Project_X
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel9.AutoScroll = true;
-            this.panel9.AutoSize = true;
             this.panel9.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel9.BackColor = System.Drawing.Color.Linen;
             this.panel9.Controls.Add(this.panel1);
@@ -117,7 +116,7 @@ namespace Project_X
             this.panel9.Margin = new System.Windows.Forms.Padding(2);
             this.panel9.MinimumSize = new System.Drawing.Size(100, 100);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(337, 691);
+            this.panel9.Size = new System.Drawing.Size(337, 783);
             this.panel9.TabIndex = 14;
             // 
             // panel1
@@ -315,7 +314,7 @@ namespace Project_X
             this.reset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.reset.BackColor = System.Drawing.Color.Black;
             this.reset.ForeColor = System.Drawing.Color.White;
-            this.reset.Location = new System.Drawing.Point(254, 666);
+            this.reset.Location = new System.Drawing.Point(254, 758);
             this.reset.Margin = new System.Windows.Forms.Padding(2);
             this.reset.Name = "reset";
             this.reset.Size = new System.Drawing.Size(81, 23);
@@ -459,7 +458,7 @@ namespace Project_X
             this.admin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.admin.BackColor = System.Drawing.Color.Black;
             this.admin.ForeColor = System.Drawing.Color.White;
-            this.admin.Location = new System.Drawing.Point(263, 738);
+            this.admin.Location = new System.Drawing.Point(263, 830);
             this.admin.Margin = new System.Windows.Forms.Padding(2);
             this.admin.Name = "admin";
             this.admin.Size = new System.Drawing.Size(81, 23);
@@ -487,7 +486,7 @@ namespace Project_X
             this.bills.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.bills.BackColor = System.Drawing.Color.Black;
             this.bills.ForeColor = System.Drawing.Color.White;
-            this.bills.Location = new System.Drawing.Point(178, 738);
+            this.bills.Location = new System.Drawing.Point(178, 830);
             this.bills.Margin = new System.Windows.Forms.Padding(2);
             this.bills.Name = "bills";
             this.bills.Size = new System.Drawing.Size(81, 23);
@@ -506,7 +505,7 @@ namespace Project_X
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(349, 43);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(785, 718);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(785, 810);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
             // sublayer
@@ -514,12 +513,12 @@ namespace Project_X
             this.sublayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.sublayer.BackColor = System.Drawing.Color.Black;
             this.sublayer.ForeColor = System.Drawing.Color.White;
-            this.sublayer.Location = new System.Drawing.Point(94, 738);
+            this.sublayer.Location = new System.Drawing.Point(94, 830);
             this.sublayer.Margin = new System.Windows.Forms.Padding(2);
             this.sublayer.Name = "sublayer";
             this.sublayer.Size = new System.Drawing.Size(81, 23);
             this.sublayer.TabIndex = 22;
-            this.sublayer.Text = "Subly";
+            this.sublayer.Text = "Supplies";
             this.sublayer.UseVisualStyleBackColor = false;
             this.sublayer.Visible = false;
             this.sublayer.Click += new System.EventHandler(this.sublayer_Click);
@@ -544,7 +543,7 @@ namespace Project_X
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1146, 772);
+            this.ClientSize = new System.Drawing.Size(1146, 864);
             this.Controls.Add(this.manageButton);
             this.Controls.Add(this.sublayer);
             this.Controls.Add(this.flowLayoutPanel1);
@@ -558,6 +557,7 @@ namespace Project_X
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "Form2";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
