@@ -99,7 +99,7 @@
             this.Buy.TabIndex = 14;
             this.Buy.Text = "Buy";
             this.Buy.UseVisualStyleBackColor = false;
-            this.Buy.Click += new System.EventHandler(this.button1_Click);
+            this.Buy.Click += new System.EventHandler(this.buy_Click);
             // 
             // quantity
             // 

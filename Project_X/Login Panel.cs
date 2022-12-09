@@ -107,7 +107,7 @@ namespace Project_X
                         return;
                     }
                     conn.Close();
-                    Form2 frm2 = new Form2();
+                    Car_list frm2 = new Car_list();
                     frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
                     frm2.Show();
                     this.Hide();
@@ -153,9 +153,10 @@ namespace Project_X
         {
             this.Close();
         }
-        private void login_Click_1(object sender, EventArgs e)
+        private void exit_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }

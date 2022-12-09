@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Project_X
 {
@@ -36,13 +38,9 @@ namespace Project_X
             }
             catch (Exception)
             {
+                con.Close();
                 MessageBox.Show("can not Load the bills");
             }
-        }
-
-        private void editButton_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -50,6 +48,22 @@ namespace Project_X
             SqlCommand cmd = new SqlCommand($"select * from {table} and  ssn LIKE '%{searchBox.Text}%' or phone LIKE '%{searchBox.Text}%' or " +
                 $"name LIKE '%{searchBox.Text}%' or id LIKE '%{searchBox.Text}%'  ;", con);
             newTableData(cmd);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand($"select * from {table} ;", con);
+            newTableData(cmd);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var today = DateTime.Today.ToShortDateString();
+            var lastmonth = DateTime.Today.AddMonths(-1).ToShortDateString();
+
+            SqlCommand cmd = new SqlCommand($"select * from Bills where Date > '{lastmonth}' and Date < '{today}';", con);
+            newTableData(cmd);
+
         }
     }
 }

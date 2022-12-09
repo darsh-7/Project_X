@@ -27,21 +27,27 @@ namespace Project_X
 
         private void change_Click(object sender, EventArgs e)
         {
-            try
+            if (checkuser())
             {
-                
-                SqlCommand cmd = new SqlCommand($"update usersAccounts set Password = '{password.Text}' where name = {Program.name};", con);
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                this.Close();
+                try
+                {
+                    SqlCommand cmd = new SqlCommand($"update usersAccounts set Password = '{password.Text}' where name = {Program.name};", con);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    this.Close();
 
-                MessageBox.Show("password changed");
+                    MessageBox.Show("password changed");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Enter valed data");
+                    con.Close();
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("Enter valed data");
-                con.Close();
+                MessageBox.Show("password not right");
             }
         }
         private bool checkuser()
@@ -49,7 +55,7 @@ namespace Project_X
 
             try
             {
-                SqlCommand cmd = new SqlCommand($"update usersAccounts Password = '{password.Text}' where name = {Program.name};", con);
+                SqlCommand cmd = new SqlCommand($"select * from usersAccounts  where name = {Program.name} and  Password = '{password.Text}';", con);
                 con.Open();
 
                 DataSet ds = new DataSet();
@@ -62,7 +68,7 @@ namespace Project_X
             }
             catch (Exception)
             {
-                //MessageBox.Show("Enter valed data");
+                MessageBox.Show("Enter valed data");
                 con.Close();
             }
 

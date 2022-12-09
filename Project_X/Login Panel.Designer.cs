@@ -121,7 +121,7 @@ namespace Project_X
             this.login.TabIndex = 10;
             this.login.Text = "Exit";
             this.login.UseVisualStyleBackColor = false;
-            this.login.Click += new System.EventHandler(this.login_Click_1);
+            this.login.Click += new System.EventHandler(this.exit_Click);
             // 
             // password
             // 

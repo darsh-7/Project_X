@@ -17,7 +17,7 @@ namespace Project_X
         bool nameValed = false;
         bool idValed = false;
         bool phoneValed = false;
-        bool emailValed = false;
+        bool emailValed = true;
         bool addressValed = false;
         public Buy_Car(string carID)
         {
@@ -292,11 +292,6 @@ namespace Project_X
                             }
                         }
             */
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
     }

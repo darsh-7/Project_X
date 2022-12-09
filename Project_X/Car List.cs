@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Project_X
 {
-    public partial class Form2 : Form
+    public partial class Car_list : Form
     {
         SqlConnection con = new SqlConnection(Program.sqlConnection);
         SqlCommand cmd;
@@ -22,7 +22,7 @@ namespace Project_X
 
         string udsername = Program.name;
         int accountAccs = Program.accountAccs;
-        public Form2()
+        public Car_list()
         {
             InitializeComponent();
             User_Name.Text = $"Welcome {udsername} ({accountAccs})";
@@ -93,7 +93,7 @@ namespace Project_X
         private Image Getmages(string year , string carModel)
         {
             SqlConnection connection2 = new SqlConnection(Program.sqlConnection);
-            string q = $"select * from CarsImages where model = '{year} {carModel}';";
+            string q = $"select * from CarsImages where model = '{carModel}';";
             connection2.Open();
             SqlCommand cmmd = new SqlCommand(q, connection2);
             SqlDataReader reader = cmmd.ExecuteReader();
@@ -190,7 +190,7 @@ namespace Project_X
 
         private void searchbutton_Click(object sender, EventArgs e)
         {
-            LoadProductsql($"select * from {tableName} WHERE model LIKE '%{searchBox.Text}%';");
+            LoadProductsql($"select * from {tableName} WHERE model LIKE '%{searchBox.Text}% ';");
         }
 
         public void reset_Click(object sender, EventArgs e)
@@ -312,6 +312,11 @@ namespace Project_X
         {
             changePass form = new changePass();
             form.ShowDialog();
+        }
+
+        private void searchBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

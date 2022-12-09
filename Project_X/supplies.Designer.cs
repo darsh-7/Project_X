@@ -342,7 +342,7 @@ namespace Project_X
             this.carsmodels.TabIndex = 50;
             this.carsmodels.Text = "Models";
             this.carsmodels.UseVisualStyleBackColor = false;
-            this.carsmodels.Click += new System.EventHandler(this.carsImage_Click);
+            this.carsmodels.Click += new System.EventHandler(this.Models_Click);
             // 
             // carimages
             // 

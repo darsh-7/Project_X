@@ -132,9 +132,9 @@ namespace Project_X
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label9.Location = new System.Drawing.Point(179, 186);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 21);
+            this.label9.Size = new System.Drawing.Size(45, 21);
             this.label9.TabIndex = 48;
-            this.label9.Text = "Color";
+            this.label9.Text = "catID";
             // 
             // textBox8
             // 
@@ -150,9 +150,9 @@ namespace Project_X
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label8.Location = new System.Drawing.Point(179, 141);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(48, 21);
+            this.label8.Size = new System.Drawing.Size(40, 21);
             this.label8.TabIndex = 46;
-            this.label8.Text = "Color";
+            this.label8.Text = "year";
             // 
             // labelquary
             // 
@@ -254,9 +254,9 @@ namespace Project_X
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.Location = new System.Drawing.Point(179, 96);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 21);
+            this.label7.Size = new System.Drawing.Size(51, 21);
             this.label7.TabIndex = 36;
-            this.label7.Text = "Color";
+            this.label7.Text = "speed";
             // 
             // textBox6
             // 
@@ -334,6 +334,7 @@ namespace Project_X
             // 
             this.textBox2.Location = new System.Drawing.Point(11, 164);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.MaxLength = 30;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(162, 20);
             this.textBox2.TabIndex = 27;
@@ -352,6 +353,7 @@ namespace Project_X
             // 
             this.textBox1.Location = new System.Drawing.Point(11, 119);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MaxLength = 30;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(162, 20);
             this.textBox1.TabIndex = 25;

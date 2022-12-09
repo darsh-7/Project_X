@@ -20,7 +20,7 @@ namespace Project_X
             {
                 lbl_offer.Visible = true;
                 label8.Visible = true;
-                lbl_offer.Text = offer + " $";
+                lbl_offer.Text = offer ;
                 Font fnt = new Font(carcost.Font, FontStyle.Strikeout);
                 carcost.Font = fnt;
             }
@@ -51,7 +51,7 @@ namespace Project_X
         }
         private void getImages()
         {
-            string cmdString = $"SELECT * FROM CarsImages where model ='{CarYear} {CarModel}';";
+            string cmdString = $"SELECT * FROM CarsImages where model ='{CarModel}';";
             SqlConnection conn = new SqlConnection(Program.sqlConnection);
             SqlCommand cmmd = new SqlCommand(cmdString, conn);
 
@@ -89,7 +89,7 @@ namespace Project_X
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buy_Click(object sender, EventArgs e)
         {
             if (Program.accountAccs > 2)
             {

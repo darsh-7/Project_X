@@ -25,7 +25,6 @@ namespace Project_X
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-
         }
 
         public string CarID
@@ -94,7 +93,7 @@ namespace Project_X
             get => pictureBox1.BackgroundImage;
             set => pictureBox1.BackgroundImage = value;
         }
-        private void GetListData(string cmdString)
+        private void refreshData(string cmdString)
         {
             SqlConnection conn = new SqlConnection(Program.sqlConnection);
             SqlCommand cmmd = new SqlCommand(cmdString, conn);
@@ -124,7 +123,7 @@ namespace Project_X
         {
             ShowCar Check = new ShowCar(CarID, CarModel, CarQuantity, CarCost, carSpeed, carYear, CarColors, image, offer);
             Check.ShowDialog();
-            GetListData($"select * from CarsDetails where id = {CarID};");
+            refreshData($"select * from CarsDetails where id = {CarID};");
             
         }
 
@@ -132,7 +131,7 @@ namespace Project_X
         {
             ShowCar Check = new ShowCar(CarID, CarModel, CarQuantity, CarCost, carSpeed, carYear, CarColors, image,offer);
             Check.ShowDialog();
-            GetListData($"select * from CarsDetails where id = {CarID};");
+            refreshData($"select * from CarsDetails where id = {CarID};");
 
         }
 
@@ -140,7 +139,7 @@ namespace Project_X
         {
             ShowCar Check = new ShowCar(CarID, CarModel, CarQuantity, CarCost, carSpeed, carYear, CarColors, image, offer);
             Check.ShowDialog();
-            GetListData($"select * from CarsDetails where id = {CarID};");
+            refreshData($"select * from CarsDetails where id = {CarID};");
 
         }
 

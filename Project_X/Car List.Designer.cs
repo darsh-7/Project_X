@@ -2,7 +2,7 @@
 
 namespace Project_X
 {
-    partial class Form2
+    partial class Car_list
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace Project_X
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Car_list));
             this.logout = new System.Windows.Forms.Button();
             this.User_Name = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -256,6 +256,7 @@ namespace Project_X
             this.yearBox1.Name = "yearBox1";
             this.yearBox1.Size = new System.Drawing.Size(172, 20);
             this.yearBox1.TabIndex = 28;
+            this.yearBox1.TextChanged += new System.EventHandler(this.yearBox2_TextChanged);
             // 
             // oldest
             // 
@@ -330,6 +331,7 @@ namespace Project_X
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(234, 20);
             this.searchBox.TabIndex = 19;
+            this.searchBox.TextChanged += new System.EventHandler(this.searchBox_TextChanged);
             // 
             // panel10
             // 
@@ -538,7 +540,7 @@ namespace Project_X
             this.manageButton.UseVisualStyleBackColor = false;
             this.manageButton.Click += new System.EventHandler(this.manageButton_Click);
             // 
-            // Form2
+            // Car_list
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -558,7 +560,7 @@ namespace Project_X
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "Form2";
+            this.Name = "Car_list";
             this.Text = "Form2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel9.ResumeLayout(false);

@@ -33,8 +33,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.editButton = new System.Windows.Forms.Button();
             this.searchBox = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -58,14 +59,15 @@
             this.panel1.AutoSize = true;
             this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.Linen;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.searchButton);
             this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.editButton);
             this.panel1.Controls.Add(this.searchBox);
             this.panel1.Location = new System.Drawing.Point(466, 12);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 163);
+            this.panel1.Size = new System.Drawing.Size(311, 96);
             this.panel1.TabIndex = 27;
             // 
             // searchButton
@@ -93,20 +95,6 @@
             this.label8.TabIndex = 21;
             this.label8.Text = "Search";
             // 
-            // editButton
-            // 
-            this.editButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.editButton.BackColor = System.Drawing.Color.Black;
-            this.editButton.ForeColor = System.Drawing.Color.White;
-            this.editButton.Location = new System.Drawing.Point(227, 138);
-            this.editButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.editButton.Name = "editButton";
-            this.editButton.Size = new System.Drawing.Size(81, 23);
-            this.editButton.TabIndex = 23;
-            this.editButton.Text = "Edit";
-            this.editButton.UseVisualStyleBackColor = false;
-            this.editButton.Click += new System.EventHandler(this.editButton_Click);
-            // 
             // searchBox
             // 
             this.searchBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,6 +103,34 @@
             this.searchBox.Name = "searchBox";
             this.searchBox.Size = new System.Drawing.Size(210, 20);
             this.searchBox.TabIndex = 22;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(227, 71);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(81, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Bills";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(140, 71);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 23);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "Salles";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // ShowBills
             // 
@@ -141,8 +157,9 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button editButton;
         private System.Windows.Forms.TextBox searchBox;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

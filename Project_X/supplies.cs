@@ -11,7 +11,7 @@ namespace Project_X
         SqlConnection con = new SqlConnection(Program.sqlConnection);
         SqlCommand cmd;
 
-        string[] tables = { "cars", "carsmodels", "CarsImages"};
+        string[] tables = { "cars", "CarsModels", "CarsImages"};
         string tableSelected = "cars";
 
         public supplies()
@@ -30,14 +30,14 @@ namespace Project_X
             label5.Text = "offer";
             label6.Text = "quantity";
         }
-        private bool checkExsist(string table = "cars")
+        private bool checkExsist()
         {
 
             try
             {
-                if (table == tables[0])
+                if (tableSelected == tables[0])
                     cmd = new SqlCommand($"select * from {tableSelected} where id = '{textBox1.Text}';", con);
-                else if (table == tables[1])
+                else if (tableSelected == tables[1])
                     cmd = new SqlCommand($"select * from {tableSelected} where model = '{textBox1.Text}';", con);
 
                 con.Open();
@@ -162,9 +162,9 @@ namespace Project_X
         }
         private void cars_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand($"select * from {tables[1]} ;", con);
+            SqlCommand cmd = new SqlCommand($"select * from {tables[0]} ;", con);
             newTableData(cmd);
-            tableSelected = tables[1];
+            tableSelected = tables[0];
             TableName.Text = tableSelected;
             HideViewLables(2);
             HideViewLables(1, 6);
@@ -178,20 +178,24 @@ namespace Project_X
         }
         private void Models_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand($"select * from {tables[2]} ;", con);
+            SqlCommand cmd = new SqlCommand($"select * from {tables[1]} ;", con);
             newTableData(cmd);
-            HideViewLables(1, 0);
-            tableSelected = tables[3];
+            HideViewLables(1, 4);
+            tableSelected = tables[1];
             TableName.Text = tableSelected;
+            label1.Text = "Model";
+            label2.Text = "speed";
+            label3.Text = "year";
+            label4.Text = "catagoryId";
 
         }
         private void carsImage_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand($"select * from {tables[1]} ;", con);
+            SqlCommand cmd = new SqlCommand($"select * from {tables[2]} ;", con);
             newTableData(cmd);
             HideViewLables(1, 0);
 
-            tableSelected = tables[1];
+            tableSelected = tables[2];
             TableName.Text = tableSelected;
             HideViewLables(2);
 
@@ -208,7 +212,7 @@ namespace Project_X
             if (boxEmpty4)
             {
 
-                 if (!checkExsist(tables[0]) && tableSelected == tables[0] && boxEmpty6)
+                 if (!checkExsist() && boxEmpty6)
                 {
                     try
                     {
@@ -226,7 +230,7 @@ namespace Project_X
                     }
 
                 }
-                else if (!checkExsist(tables[1]) && tableSelected == tables[1] && boxEmpty4)
+                else if (!checkExsist() && boxEmpty4)
                 {
                     try
                     {
@@ -330,11 +334,17 @@ namespace Project_X
             {
                 if (checkExsist())
                 {
+                    if (tableSelected == tables[0])
+                        cmd = new SqlCommand($"delete from {tableSelected} where id = '{textBox1.Text}';", con);
+                    else if (tableSelected == tables[1])
+                        cmd = new SqlCommand($"delete from {tableSelected} where model = '{textBox1.Text}';", con);
+                    else if (tableSelected == tables[2])
+                        cmd = new SqlCommand($"delete from {tableSelected} where imageID = '{textBox1.Text}';", con);
+
                     con.Open();
                     cmd.ExecuteNonQuery();
                     con.Close();
                     MessageBox.Show("delete done");
-
                 }
                 else
                 {
@@ -342,12 +352,6 @@ namespace Project_X
                     return;
                 }
 
-                if (tableSelected == tables[0])
-                    cmd = new SqlCommand($"delete from {tableSelected} where id = '{textBox1.Text}';", con);
-                else if (tableSelected == tables[1])
-                    cmd = new SqlCommand($"delete from {tableSelected} where model = '{textBox1.Text}';", con);
-                else if (tableSelected == tables[2])
-                    cmd = new SqlCommand($"delete from {tableSelected} where imageID = '{textBox1.Text}';", con);
             }
             else
             {
@@ -361,7 +365,7 @@ namespace Project_X
         }
         private void back_Click(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
+            Car_list frm2 = new Car_list();
             frm2.FormClosed += new FormClosedEventHandler(frm2_FormClosed);
             frm2.Show();
             this.Hide();
